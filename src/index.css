@@ -1,13 +1,246 @@
 body {
+  background-color: rgb(157, 33, 33) ;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-button-container{
+  
+}
+.form-container{
+  background-color: rgb(249, 249, 249);
+  border-bottom: 1px solid black;
+  width: 36.3%;
+  height: 27vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.country input{
+  display: flex;
+  background-color: rgb(252, 252, 255);
+  border: 1px solid grey;
+  padding: 20px 20px;
+  width: 91%;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-left: 0.4rem;
+  border: none;
+  border-bottom: 2px solid black;
+}
+@media screen and (max-width: 1430px) {
+  .country input{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .country input{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .country input{
+    width: 40%;
+  }
+}
+input:focus{
+  border: none;
+}
+.button{
+  display: flex;
+  width: 120%;
+}
+.button-focus:hover{
+  opacity: 0.7;
+}
+.button-focus:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+.button-search:hover{
+  opacity: 0.7;
+}
+.button-search:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+.button-search,
+.button-focus {
+  flex: 1;
+  margin: 0.3px 2px; /* Adjusted margin */
+  height: 44px;
+  border-radius: 6px;
+  border: none;
+  background-color: #405cf5;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+.button-search{
+  width: 40%;
+}
+.button-focus{
+  width: 56%;
+}
+
+
+
+.container-information{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a3b2d3;
+  width: 50%;
+  height: 100vh;
+}
+
+.info-list{
+  display: grid;
+  gap: 1rem;
+}
+
+.list-items{
+  display: grid;
+  margin-top: 15rem;
+  gap: 2rem;
+  background-color: rgba(23, 20, 20, 0.232);
+  margin-right: 2.5rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px){
+  .list-items{
+    width: 70%;
+    font-size: 10px;
+    text-align: center;
+    padding: 1rem;
+  }
+  .container-information{
+    background-color: rgb(157, 33, 33) ;
+  }
+  .list-items .Capital{
+    width: 50%;
+    margin-left: 3rem;
+  }
+  .list-items .Language{
+    width: 50%;
+    margin-left: 3rem;
+  }
+  .list-items .Region{
+    width: 50%;
+    margin-left: 3rem;
+  }
+  .list-items .Currencies{
+    width: 50%;
+    margin-left: 3rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .list-items{
+    background-color: rgb(157, 33, 33) ;
+    border: none;
+    padding: 0.5rem;
+  }
+  .list-items .Country .country-span{
+    letter-spacing: 0;
+  }
+}
+
+.list-items .country-span{
+  opacity: 0.7;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 2px 2px black;
+
+}
+.list-items strong:nth-child(2) {
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+.list-items strong:nth-child(3) {
+  background-color: rgb(0, 68, 255);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+.list-items strong:nth-child(4) {
+  background-color: rgb(225, 57, 57);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+.list-items strong:nth-child(5) {
+  background-color: rgb(77, 255, 0);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+/*Country info*/
+.flag-container{
+  display: grid;
+  place-content: center;
+  margin-top: -1rem;
+  height: 20vh;
+  
+}
+.Flag{
+  display: grid;
+  place-content: center;
+  scale: 6;
+}
+
+.coastOfArms{
+  width: 100%;
+  height: 40vh;
+  margin-bottom: -17rem;
+  border-bottom: 2px solid black;
+}
+
+
+.Country{
+  text-align: center;
+  margin-left: 2.5rem;
+}
+
+
+
+/*reloads page*/
+.reload-page span{
+ transition: all 0.2s ease;
+ display: grid;
+ place-content: center;
+ margin-top: 0rem;
+}
+.reload-page span:hover{
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 550px){
+  .reload-page span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 20rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 20%;
+  }
 }
