@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/City-app/static/css/main.b3158d2b.css",
+    "main.js": "/City-app/static/js/main.7e656ac8.js",
+    "index.html": "/City-app/index.html",
+    "main.b3158d2b.css.map": "/City-app/static/css/main.b3158d2b.css.map",
+    "main.7e656ac8.js.map": "/City-app/static/js/main.7e656ac8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3158d2b.css",
+    "static/js/main.7e656ac8.js"
+  ]
+}
